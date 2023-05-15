@@ -12,7 +12,7 @@ interface CategoriasProps {
   }
 interface NovaOperacaoProps{
     categoria: string | undefined,
-    subcategoria: string,
+    subcategoria: string | undefined,
     descricao: string,
     valor: number
   }

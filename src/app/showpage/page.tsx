@@ -35,8 +35,9 @@ const Show = () => {
   const escolheuCategoria = (e : React.ChangeEvent<HTMLSelectElement>)=>{
     const nomeCategoriaEscolhida : string = e.target.value
     const categoriaEscolhida : (CategoriasProps | undefined) = categorias?.find(item => item.nome == nomeCategoriaEscolhida)
-    setNovaOperacao({...novaOperacao, categoria: categoriaEscolhida?._id})
+    setNovaOperacao({...novaOperacao, categoria: categoriaEscolhida?._id, subcategoria: categoriaEscolhida?.subcategorias[0]})
     setSubcategorias(categoriaEscolhida?.subcategorias)
+
    
   }
 
